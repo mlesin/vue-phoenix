@@ -16,7 +16,7 @@
     "test": "test"
   },
   "scripts": {
-    "build": "tsc -p src/tsconfig.json && rollup -c",
+    "build": "rollup -c",
     "cover": "jest --coverage --no-cache",
     "format": "prettier --write '**/*.ts' ",
     "release": "sh release.sh",
@@ -28,28 +28,29 @@
   ],
   "types": "types/index.d.ts",
   "devDependencies": {
-    "@types/jest": "^23.3.13",
-    "@types/node": "^8.0.47",
+    "@types/jest": "^26.0.4",
+    "@types/node": "^14.0.22",
     "@vue/test-utils": "^1.0.0-beta.28",
     "codecov": "^3.0.2",
-    "jest": "^23.6",
-    "prettier": "^1.10.2",
-    "prettier-tslint": "^0.3.0",
-    "rollup": "^0.50.0",
-    "rollup-plugin-commonjs": "^8.2.6",
-    "rollup-plugin-typescript": "^0.8.1",
-    "ts-jest": "^23.10.5",
-    "tslint": "^5.12.1",
+    "jest": "^26.1.0",
+    "prettier": "^2.0.5",
+    "prettier-tslint": "^0.4.2",
+    "rollup": "^2.21.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "ts-jest": "^26.1.2",
+    "tslib": "^2.0.0",
+    "tslint": "^6.1.2",
     "tslint-config-prettier": "^1.17.0",
     "typescript": "^3.2.0",
     "vue": "^2.5.22",
-    "vue-jest": "^2.6.0",
+    "vue-jest": "^3.0.6",
     "vue-template-compiler": "^2.5.13"
   },
   "dependencies": {
-    "@types/phoenix": "0.0.4",
+    "@types/phoenix": "^1.4.4",
     "phoenix": "^1.4.0",
-    "vue-class-component": "^6.3.2"
+    "vue-class-component": "^7.2.3"
   },
   "repository": {
     "type": "git",
