@@ -5,7 +5,7 @@
   "description": "Vue-Phoenix is a Phoenix integration for Vuejs.",
   "main": "dist/index.common.js",
   "module": "dist/index.es.js",
-  "typings": "dist/index.d.ts",
+  "typings": "types/index.d.ts",
   "keywords": [
     "vue",
     "phoenix",
@@ -30,8 +30,8 @@
   "devDependencies": {
     "@types/jest": "^26.0.4",
     "@types/node": "^14.0.22",
-    "@vue/test-utils": "^1.0.0-beta.28",
-    "codecov": "^3.0.2",
+    "@vue/test-utils": "^1.0.3",
+    "codecov": "^3.7.0",
     "jest": "^26.1.0",
     "prettier": "^2.0.5",
     "prettier-tslint": "^0.4.2",
@@ -44,12 +44,12 @@
     "tslint-config-prettier": "^1.17.0",
     "typescript": "^3.9.6",
     "vue-jest": "^3.0.6",
-    "vue-template-compiler": "^2.5.13"
+    "vue-template-compiler": "^2.6.11"
   },
   "dependencies": {
     "@types/phoenix": "^1.4.4",
     "phoenix": "^1.5.3",
-    "vue": "^2.5.22",
+    "vue": "^2.6.11",
     "vue-class-component": "^7.2.3"
   },
   "repository": {
