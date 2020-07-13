@@ -2,9 +2,9 @@
   "compilerOptions": {
     "outDir": "../dist",
     "moduleResolution": "node",
-    "target": "es5",
-    "module": "es2015",
-    "lib": ["dom", "es2015"],
+    "target": "es6",
+    "module": "es6",
+    "lib": ["dom", "es6"],
     "strictPropertyInitialization": false,
     "sourceMap": true,
     "strict": true,
