@@ -32,11 +32,11 @@ defmodule Event.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.4.0"},
-      {:phoenix_pubsub, "~> 1.1"},
-      {:gettext, "~> 0.11"},
-      {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:phoenix, "~> 1.5.3"},
+      {:phoenix_pubsub, "~> 2.0.0"},
+      {:gettext, "~> 0.18.0"},
+      {:jason, "~> 1.2.1"},
+      {:plug_cowboy, "~> 2.3.0"}
     ]
   end
 end

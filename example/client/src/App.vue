@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <v-card>
+    <v-app>
       <v-form ref="form" @keyup.native.enter="handleSubmit">
         <div>
           <v-list ref="list" class="message-list" two-line subheader>
             <v-subheader>Message list:</v-subheader>
-            <v-list-tile v-for="(history, index) in historyList" :key="index">
-              <v-list-tile-content>
-                <v-list-tile-title>{{ history.sender }}</v-list-tile-title>
-                <v-list-tile-sub-title>{{ history.message }}</v-list-tile-sub-title>
-              </v-list-tile-content>
-            </v-list-tile>
+            <v-list-item v-for="(history, index) in historyList" :key="index">
+              <v-list-item-content>
+                <v-list-item-title>{{ history.sender }}</v-list-item-title>
+                <v-list-item-subtitle>{{ history.message }}</v-list-item-subtitle>
+              </v-list-item-content>
+            </v-list-item>
           </v-list>
         </div>
         <v-divider></v-divider>
@@ -28,14 +28,47 @@
           </v-flex>
         </v-layout>
       </v-form>
-    </v-card>
+    </v-app>
   </div>
 </template>
 
 <script lang="ts">
 import { Obey } from '@vip30/vue-phoenix'
 import { Component, Vue } from 'vue-property-decorator'
-@Component({})
+import {
+  VApp,
+  VCard,
+  VForm,
+  VList,
+  VLayout,
+  VSubheader,
+  VDivider,
+  VFlex,
+  VTextField,
+  VBtn,
+  VListItem,
+  VListItemContent,
+  VListItemTitle,
+  VListItemSubtitle
+} from 'vuetify/lib'
+@Component({
+  components: {
+    VApp,
+    VCard,
+    VForm,
+    VLayout,
+    VList,
+    VSubheader,
+    VDivider,
+    VFlex,
+    VTextField,
+    VBtn,
+    VListItem,
+    VListItemContent,
+    VListItemTitle,
+    VListItemSubtitle
+  }
+})
 export default class App extends Vue {
   public sender = ''
   public message = ''
@@ -63,9 +96,8 @@ export default class App extends Vue {
 }
 </script>
 
-<style lang="stylus">
-@import '~vuetify/src/stylus/main';
-
+<style lang="css">
+/* @import '~vuetify/src/styles/main'; */
 .message-list {
   height: 80vh;
   overflow-y: auto;

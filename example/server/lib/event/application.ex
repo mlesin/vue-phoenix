@@ -9,7 +9,8 @@ defmodule Event.Application do
     # List all child processes to be supervised
     children = [
       # Start the endpoint when the application starts
-      EventWeb.Endpoint
+      EventWeb.Endpoint,
+      {Phoenix.PubSub, [name: Event.PubSub, adapter: Phoenix.PubSub.PG2]}
       # Starts a worker by calling: Event.Worker.start_link(arg)
       # {Event.Worker, arg},
     ]

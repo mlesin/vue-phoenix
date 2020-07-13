@@ -12,7 +12,7 @@ config :event, EventWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "H3XDJ0QcvewZBkh5ANIKXFeLPSBsih+c258CBEx9fI7PCm38MYj8ClGFd6R0x7t8",
   render_errors: [view: EventWeb.ErrorView, accepts: ~w(json)],
-  pubsub: [name: Event.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub_server: Event.PubSub
 
 # Configures Elixir's Logger
 config :logger, :console,
