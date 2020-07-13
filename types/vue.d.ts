@@ -1,16 +1,17 @@
 
   import { Socket, Channel } from 'phoenix';
   import ChannelKeeper from './channelKeeper'
-  import Vue, { PluginFunction, WatchOptions } from 'vue'
+  import Vue from 'vue'
   declare module "vue/types/vue" {
     interface Vue {
       $channelKeeper: ChannelKeeper
       $channel: Channel
       $socket: Socket
+      $waitingEventList: Record<string, string >
       /**
        * Init the channel and listen the event listed on options[phoenix]
        */
-      $initChannel: (channelName: string, params?: object) => void
+      $initChannel: (channelName: string, params?: Record<string, unknown>) => void
     }
   }
   declare module "vue/types/options" {

@@ -6,6 +6,6 @@ export * from './obey';
 
 export default class VuePhoenix implements PluginObject<string> {
     socket: Socket;
-    constructor(socket: string | Socket, params?: object);
+    constructor(socket: string | Socket, params?: Record<string, unknown>);
     install(localVue: VueConstructor<Vue>): void;
 }

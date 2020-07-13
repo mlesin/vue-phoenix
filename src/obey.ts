@@ -2,7 +2,7 @@ import Vue from 'vue'
 import { createDecorator } from 'vue-class-component'
 
 export function Obey(eventName: string, channelName?: string) {
-  return (target: Vue, key: string, descriptor: any) => {
+  return (target: Vue, key: string, _descriptor: unknown) => {
     createDecorator((componentOptions, k) => {
       componentOptions.phoenix = !componentOptions.phoenix ? Object.create(null) : componentOptions.phoenix
       if (componentOptions.phoenix) {

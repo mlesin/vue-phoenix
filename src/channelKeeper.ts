@@ -5,7 +5,7 @@ export default class ChannelKeeper {
     [key: string]: Channel
   } = {}
   constructor(private socket: Socket) {}
-  public retrieveChannel(channelName: string, params?: object) {
+  public retrieveChannel(channelName: string, params?: Record<string, unknown>): Channel {
     if (this.channels[channelName]) {
       return this.channels[channelName]
     } else {

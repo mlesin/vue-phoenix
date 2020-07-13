@@ -7,7 +7,7 @@ export * from './obey'
 
 export default class VuePhoenix implements PluginObject<string> {
   public socket: Socket
-  constructor(socket: string | Socket, params?: object) {
+  constructor(socket: string | Socket, params?: Record<string, unknown>) {
     this.socket =
       socket instanceof Socket
         ? socket
@@ -15,7 +15,7 @@ export default class VuePhoenix implements PluginObject<string> {
             params
           })
   }
-  public install(localVue: VueConstructor<Vue>) {
+  public install(localVue: VueConstructor<Vue>): void {
     Vue.prototype.$socket = this.socket
     Vue.prototype.$channelKeeper = new ChannelKeeper(this.socket)
     Vue.prototype.$vuePhoenix = this

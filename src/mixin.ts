@@ -2,7 +2,7 @@ import Vue from 'vue'
 
 export default Vue.extend({
   methods: {
-    $initChannel(channelName: string, params?: object) {
+    $initChannel(channelName: string, params?: Record<string, unknown>) {
       if (this.$waitingEventList) {
         this.$channel = this.$channelKeeper.retrieveChannel(channelName, params)
         for (const key of Object.keys(this.$waitingEventList)) {

@@ -1,7 +1,8 @@
-import { createLocalVue, shallowMount } from '@vue/test-utils'
+import { createLocalVue, shallowMount, Wrapper } from '@vue/test-utils'
 import Vue from 'vue'
 import Component from 'vue-class-component'
 import VuePhoenix, { Obey } from '../src'
+import { VNode } from 'vue/types/umd'
 
 const localVue = createLocalVue()
 localVue.use(new VuePhoenix('/socket'))
@@ -10,8 +11,8 @@ localVue.use(new VuePhoenix('/socket'))
   name: 'dummy'
 })
 class Dummy extends Vue {
-  public dummyHello: string = 'I am dummy'
-  public render(h: any) {
+  public dummyHello = 'I am dummy'
+  public render(h: (element: string, smth: string) => VNode) {
     return h('div', this.dummyHello)
   }
 
@@ -32,7 +33,7 @@ class Dummy extends Vue {
 }
 
 class ObeyTest {
-  public wrapper: any
+  public wrapper: Wrapper<Dummy>
 
   public shallow() {
     this.wrapper = shallowMount(Dummy, {
